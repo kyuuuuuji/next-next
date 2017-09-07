@@ -7,23 +7,24 @@
 </head>
 
 <body>
+    <link rel="stylesheet" href="./css/index.css" type="text/css" ></link>
     <div>
         <form action="" id="form">
-            名前<input type="text" name="name" /></br>
-            回数<input type="text" name="counter" /></br>
-            月<input type="text" name="month" /></br>
-            日<input type="text" name="day" /></br>
-            発表者<input type="text" name="speaker" /></br>
-            テーマ<input type="text" name="theme" /></br>
-            持ち物<input type="text" name="whatYouNeed" /></br>
-            説明<input type="text" name="outline" /></br>
-            形式<input type="text" name="type" /></br>
+            <p>名前<input type="text" name="duty" /></p>
+            <p>回数<input type="text" name="counter" /></p>
+            <p>月<input type="text" name="month" /></p>
+            <p>日<input type="text" name="day" /></p>
+            <p>発表者<input type="text" name="speaker" /></p>
+            <p>テーマ<input type="text" name="theme" /></p>
+            <p>持ち物<input type="text" name="whatYouNeed" /></p>
+            <p>説明<textarea name="outline" rows="5" cols="40" ></textarea></p>
+            <p>形式<input type="text" name="type" /></p>
+            <p>連絡先<input type="text" name="contact" /></p>
             <input type="submit" name="submit-button" value="generate" />
         </form>
     </div>
-    <div id="mail">
-        <div id="content">
-        </div>
+    <div>
+        <textarea id="result" cols="70" rows="20"></textarea>
     </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./js/index.js"></script>
