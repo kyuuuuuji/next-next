@@ -12,7 +12,6 @@ var contact;
 $(function () {
     $('#form').submit(function () {
         event.preventDefault();
-        $('#result').val('');
 
         duty = $('input[name=duty]').val();
         month = $('input[name=month]').val();
@@ -22,17 +21,12 @@ $(function () {
         theme = $('input[name=theme]').val();
         whatYouNeed = $('input[name=whatYouNeed]').val();
         var pureOutline = $('textarea[name=outline]').val().split(/\r\n|\r|\n/);
-        console.log(pureOutline);
         $.each(pureOutline, function(index, val) {
             if (index != 0) {
-                outline = outline + '\n         　     ' + val
+                outline = outline + '\n         　     ' + val;
             } else {
                 outline = val;
             }
-        });
-        var arr = [ "apple", "orange", "grape" ];
-        $.each(arr, function(i, val) {
-            console.log(i + ': ' + val);
         });
         type = $('input[name=type]').val();
         contact = $('input[name=contact]').val();
