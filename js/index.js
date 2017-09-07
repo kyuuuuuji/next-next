@@ -11,6 +11,7 @@ var type;
 var contact;
 
 $(function () {
+    var clipboard = new Clipboard('.copy');
     $('#form').submit(function () {
         event.preventDefault();
 
@@ -74,4 +75,3 @@ ${month}月${day}日(${dayOfWeek})に勉強会「HR NEXT」の第${counter}回�
 
 ${duty}`
 }
-

@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <link rel="stylesheet" href="./css/index.css" type="text/css" ></link>
+    <link rel="stylesheet" href="./css/index.css" type="text/css"></link>
     <div>
         <form action="" id="form">
             <p>名前<input type="text" name="duty" required /></p>
@@ -17,7 +17,7 @@
             <p>発表者<input type="text" name="speaker" required /></p>
             <p>テーマ<input type="text" name="theme" required /></p>
             <p>持ち物<input type="text" name="whatYouNeed" required /></p>
-            <p>説明<textarea name="outline" rows="5" cols="40" required ></textarea></p>
+            <p>説明<textarea name="outline" rows="5" cols="40" required></textarea></p>
             <p>形式<input type="text" name="type" required /></p>
             <p>連絡先<input type="email" name="contact" required /></p>
             <input type="submit" name="submit-button" value="generate" />
@@ -25,8 +25,10 @@
     </div>
     <div>
         <textarea id="result" cols="70" rows="20"></textarea>
+        <button class="copy" data-clipboard-target="#result">copy to clipboard</button>
     </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
