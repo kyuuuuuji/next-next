@@ -11,16 +11,15 @@
     <link rel="stylesheet" href="./css/index.css" type="text/css" ></link>
     <div>
         <form action="" id="form">
-            <p>名前<input type="text" name="duty" /></p>
-            <p>回数<input type="text" name="counter" /></p>
-            <p>月<input type="text" name="month" /></p>
-            <p>日<input type="text" name="day" /></p>
-            <p>発表者<input type="text" name="speaker" /></p>
-            <p>テーマ<input type="text" name="theme" /></p>
-            <p>持ち物<input type="text" name="whatYouNeed" /></p>
-            <p>説明<textarea name="outline" rows="5" cols="40" ></textarea></p>
-            <p>形式<input type="text" name="type" /></p>
-            <p>連絡先<input type="text" name="contact" /></p>
+            <p>名前<input type="text" name="duty" required /></p>
+            <p>回数<input type="number" name="counter" required /></p>
+            <p>日<input type="date" name="day" required /></p>
+            <p>発表者<input type="text" name="speaker" required /></p>
+            <p>テーマ<input type="text" name="theme" required /></p>
+            <p>持ち物<input type="text" name="whatYouNeed" required /></p>
+            <p>説明<textarea name="outline" rows="5" cols="40" required ></textarea></p>
+            <p>形式<input type="text" name="type" required /></p>
+            <p>連絡先<input type="email" name="contact" required /></p>
             <input type="submit" name="submit-button" value="generate" />
         </form>
     </div>

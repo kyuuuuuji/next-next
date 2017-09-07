@@ -1,6 +1,7 @@
 var duty;
 var month;
 var day;
+var dayOfWeek;
 var counter;
 var speaker;
 var theme;
@@ -15,7 +16,10 @@ $(function () {
 
         duty = $('input[name=duty]').val();
         month = $('input[name=month]').val();
-        day = $('input[name=day]').val();
+        var date = new Date($('input[name=day]').val());
+        month = date.getMonth() + 1;
+        day = date.getDate();
+        dayOfWeek = [ "日", "月", "火", "水", "木", "金", "土" ][date.getDay()]
         counter = $('input[name=counter]').val();
         speaker = $('input[name=speaker]').val();
         theme = $('input[name=theme]').val();
@@ -30,7 +34,7 @@ $(function () {
         });
         type = $('input[name=type]').val();
         contact = $('input[name=contact]').val();
-        $('#result').val(getTemplate);
+        $('#result').val(getTemplate());
     })
 });
 
@@ -39,13 +43,13 @@ return `皆さま
 
 お疲れ様です。${duty}です。
 
-${month}月${day}日(水)に勉強会「HR NEXT」の第${counter}回開催を行います。
+${month}月${day}日(${dayOfWeek})に勉強会「HR NEXT」の第${counter}回開催を行います。
 
 以下にアジェンダを記載いたしますので、ご確認をお願いいたします。
 
 *****************************************************
 【第${counter}回アジェンダ】
-日時　　:　　${month}/${day}(水) 20:00 ～ 21:00
+日時　　:　　${month}/${day}(${dayOfWeek}) 20:00 ～ 21:00
 場所　　:　　研修ルームB, C
 ★ 当日「HR NEXT」を開催する部屋には目印として貼り紙をしております！
 
