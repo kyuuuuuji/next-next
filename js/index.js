@@ -52,7 +52,6 @@ ${month}月${day}日(${dayOfWeek})に勉強会「HR NEXT」の第${counter}回�
 【第${counter}回アジェンダ】
 日時　　:　　${month}/${day}(${dayOfWeek}) 20:00 ～ 21:00
 場所　　:　　研修ルームB, C
-★ 当日「HR NEXT」を開催する部屋には目印として貼り紙をしております！
 
     発表者 : ${speaker}
     テーマ : ${theme}
