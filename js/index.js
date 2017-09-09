@@ -24,22 +24,35 @@ $(function () {
         counter = $('input[name=counter]').val();
         speaker = $('input[name=speaker]').val();
         theme = $('input[name=theme]').val();
-        whatYouNeed = $('input[name=whatYouNeed]').val();
+        var pureWhatYouNeed = $('textarea[name=whatYouNeed]').val().split(/\r\n|\r|\n/);
+        whatYouNeed = createMultipleLinesContent(pureWhatYouNeed);
         var pureOutline = $('textarea[name=outline]').val().split(/\r\n|\r|\n/);
-        $.each(pureOutline, function(index, val) {
-            if (index != 0) {
-                outline = outline + '\n         　     ' + val;
-            } else {
-                outline = val;
-            }
-        });
+        outline = createMultipleLinesContent(pureOutline);
+
         type = $('input[name=type]').val();
         contact = $('input[name=contact]').val();
-        $('#result').val(getTemplate());
+        $('#result_subject').val(getMailSubject());
+        $('#result_content').val(getMailContent());
     })
 });
 
-function getTemplate() {
+function createMultipleLinesContent(content) {
+    var result;
+    $.each(content, function(index, val) {
+        if (index != 0) {
+            result = result + '\n            ' + val;
+        } else {
+            result = val;
+        }
+    });
+    return result;
+}
+
+function getMailSubject() {
+    return `【周知】勉強会「HR NEXT」第${counter}回開催【${month}/${day} 20:00~】`;
+}
+
+function getMailContent() {
 return `皆さま
 
 お疲れ様です。${duty}です。
@@ -50,8 +63,8 @@ ${month}月${day}日(${dayOfWeek})に勉強会「HR NEXT」の第${counter}回�
 
 *****************************************************
 【第${counter}回アジェンダ】
-日時　　:　　${month}/${day}(${dayOfWeek}) 20:00 ～ 21:00
-場所　　:　　研修ルームB, C
+日時   :   ${month}/${day}(${dayOfWeek}) 20:00 ～ 21:00
+場所   :   研修ルームB, C
 
     発表者 : ${speaker}
     テーマ : ${theme}
