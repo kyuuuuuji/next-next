@@ -12,7 +12,7 @@ var contact;
 
 $(function () {
     var clipboard = new Clipboard('.copy');
-    $('#form').submit(function () {
+    $('#form').submit(function (event) {
         event.preventDefault();
 
         duty = $('input[name=duty]').val();
