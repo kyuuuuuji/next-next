@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex, nofollow" />
+</head>
+
+<body>
+    <link rel="stylesheet" href="./index.css" type="text/css"></link>
+    <div>
+        <form action="" name="date_count">
+            <p>
+                <i>日数</i>
+                <input type="text" name="mentor" required />
+            </p>
+        </form>
+    </div>
+    <div>
+        <form action="" id="form">
+            <p>
+                <i>メンター</i>
+                <input type="text" name="mentor" required />
+            </p>
+            <p>
+                <i>メンティー</i>
+                <input type="number" name="mentee" required />
+            </p>
+            <p>
+                <i>日時</i>
+                <input type="datetime" name="day" required />
+            </p>
+            <p>
+                <i>会議室</i>
+                <select name="meeting_room">
+                    <option value="true">要</option>
+                    <option value="false">不要</option>
+                </select>
+            </p>
+            <input type="submit" name="submit-button" value="generate" />
+        </form>
+    </div>
+    <div>
+        <p>subject</p>
+        <p><input id="result_subject" type="text" /></p>
+        <button class="copy" data-clipboard-target="#result_subject">copy to clipboard</button>
+    </div>
+        <div>
+        <p>content</p>
+        <p><textarea id="result_content" cols="70" rows="20"></textarea></p>
+        <button class="copy" data-clipboard-target="#result_content">copy to clipboard</button>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
+
+<!-- 
+森さん
+
+お疲れ様です。藤川です。
+
+1on1日程について、以下の日程で実施しますので共有します。
+会議室の予約をお願いいたします。
+
+──────────────
+日時　　　：　10/18(水) 19:00-20:30
+メンター　：　藤川
+メンティー：　金子翼、宮部
+会議室　　：　要
+──────────────
+日時　　　：　10/23(月) 18:00-18:30
+メンター　：　藤川
+メンティー：　岩本
+会議室　　：　不要
+──────────────
+
+よろしくお願いいたします。
+ -->
